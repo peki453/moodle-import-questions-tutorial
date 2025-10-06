@@ -138,6 +138,44 @@
 
 * To customize the question statement format, refer to the last section of this document.
 
+## Short answer question
+
+```
+<question type="shortanswer">
+
+    <name>
+        <text>Week_XX_SA_F25</text>
+    </name>
+    
+    <questiontext format="html">
+        <text>Question statement</text>
+    </questiontext>
+
+    <usecase>0</usecase>
+
+    <answer fraction="100">
+        <text>Option 1</text>
+    </answer>
+
+    <answer fraction="100">
+        <text>Option 2</text>
+    </answer>
+
+    <shuffleanswers>true</shuffleanswers>
+
+</question>
+```
+
+### Instructions
+
+* Rename `XX` in the question name to match the week number for this question. **Always use two digits**. For example, use `Week_01` instead of `Week_1`.  
+
+* If you want the answers to be case-sensitive, set the value of `<usecase>` to `1`.  
+
+* Ensure that all correct answers are listed with `fraction="100"`.
+
+* To customize the question statement format, refer to the last section of this document.
+
 ## Formating questions statement
 
 If you want to format a question statement, wrap the content of the question text in `<![CDATA[` and `]]>` tags. This allows you to use HTML formatting, such as `<b>` for bold text, `<i>` for italic text, and `<tt>` for monospace text. 
@@ -158,7 +196,6 @@ Please check the following example:
     </text>
 </questiontext>
 ```
-
 
 
 
